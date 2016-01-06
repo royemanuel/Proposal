@@ -1,0 +1,6 @@
+latex mainthesis.tex
+bibtex mainthesis
+latex mainthesis.tex
+latex mainthesis.tex
+dvips mainthesis.dvi
+ps2pdf mainthesis.ps
