@@ -98,15 +98,56 @@ analyses.
 Commonalities among the definitions of resilience abound. They
 include:
 \begin{itemize}
-  \item Resisting failure after a disturbance.
+  \item Robust to failure after a disturbance.
   \item Performance persistence at a nominal level after the
     disturbance.
   \item Recover to an acceptable level of performance after some
     period of time.
 \end{itemize}
-We summarize these attributes as \emph{resistance},
+We summarize these attributes as \emph{robustness},
 \emph{persistence}, and \emph{recovery}. While few definitions
 comprise each of these attributes, all contain a subset of them. Two
 metrics \cite{Ayyub2014a} \cite{Ayyub2015} \cite{Ouyang2012}
 \cite{Ouyang2015} in the engineering literature span all three
-attributes. 
+attributes.
+
+\section{Resilience Components}
+\subsection{Performance Graph}
+To visualize the effects of the attributes of resilience, we introduce
+a performance graph. The performance graph plots the system's
+performance level on the y axis and time on the x axis. Performance
+may be of any units. For purposes of demonstration, performance will
+be rated on a zero to one scale during this section, although this is
+not strictly necessary. In Figure~\ref{fig:ResilienceDepiction}, the
+system's performance, represented by a bold black line, begins at
+level $Q$.A gray dashed line represents performance without a
+disturbance overe the same time period. At time $t_i$, a disturbance
+reduces performance. The time when failure has completed is
+$t_f$. When failure is complete, recovery begins until a steady-state
+is achieved at time $t_r$. The planning horizon for the decision maker
+is $t_h$.
+
+\begin{figure}
+  \centering
+  \includegraphics{ResilienceDepiction.pdf_tex}
+  \label{fig:ResilienceDepiction}
+\end{figure}
+
+
+
+\subsection{Robustness}
+Robustness is the ``\ldots strenght, or the ability of elements,
+systems, and other units of analysis to withstand a given level of
+stress or demand without suffering degradation or loss of function.''
+Robustness is composed of several different components including
+reliability, failure severity, and strength to resist
+stressors \cite{Bruneau2003}.
+
+Reliability is a key component of robustness. Reliability is the
+``\ldots \emph{ability} of an item \ldots to operate under designated
+operating conditions for a designated period of time or number of
+cycles.'' A component's reliability is associated with operation
+within the intended operating environment. Thus, reliability is only a
+part of resilience as the disturbances associated with resilience may
+vary considerably from the planned magnitude or type of
+disturbance.
