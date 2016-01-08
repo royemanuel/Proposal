@@ -108,7 +108,7 @@ comprise each of these attributes, all contain a subset of them. Two
 metrics \cite{Ayyub2014a, Ayyub2015, Ouyang2012, Ouyang2015, Aven2015b} in the
 engineering literature span all three attributes.
 
-\section{Resilience Components}
+\section{Conceptual Discussion of Resilience Degrees of Freedom}
 \subsection{Performance Graph}
 To visualize the effects of the attributes of resilience, we introduce
 a performance graph. The performance graph plots the system's
@@ -143,38 +143,64 @@ stressors \cite{Bruneau2003}.
 Reliability is a key component of robustness. Reliability is the
 ``\ldots \emph{ability} of an item \ldots to operate under designated
 operating conditions for a designated period of time or number of
-cycles.'' A component's reliability is associated with operation
-within the intended operating environment. Thus, reliability is only a
-part of resilience as the disturbances associated with resilience may
-vary considerably from the planned magnitude or type of
-disturbance.
+cycles.'' \cite{Modarres2010}. A component's reliability is associated with operation
+within the intended operating environment. Also, reliability typically
+deals systems that are binary. The system is either in a ``working''
+status or a ``failed'' status. Resilience accomodates levels of
+performance. Thus, reliability is a subset
+ of resilience since resilience must account for deviations from the
+ intended operating environment. Figure~\ref{fig:Reliability} shows
+ the binary behavior of a component's robustness when considering 
+ reliability \cite{Ayyub2014c, Modarres2010, Rausand2004}.
+ Figure~\ref{fig:Overstress} shows the performance
+ profile of the system in the case of overstress assuming a total
+ instantaneous failure. Figure~\ref{fig:Reliability} and
+ Figure~\ref{fig:Overstress} are visually similar, but conceptually
+ different. The overstress marked in Figure~\ref{fig:Overstress}
+ represents a departure from the intended operating environment.
+
+\begin{figure}
+ \centering
+ \includegraphics{Reliability}
+ \label{fig:Reliability}
+ \caption{Performance in the Case of Reliability}
+\end{figure}
+ 
 \begin{figure}
   \centering
-  \includegraphics{SRAEPSonly}
-  \label{fig:SRAEPSonly}
-  \caption{SRA using EPS only}
+  \includegraphics{Overstress}
+  \label{fig:Overstress}
+  \caption{Performance in the Case of Overstress}
+\end{figure}
+
+Another way to improve robustness is to make the failure profile more
+graceful. This profile could take any path to the maximum performance
+degradation. For illustrative purposes,
+Figure~\ref{fig:MultiLevelFailure} shows how a system resisting
+complete failure over time adds to the resilience of the system. 
+
+\begin{figure}
+  \centering
+  \includegraphics{MultiLevelFailure}
+  \label{fig:MultiLevelFailure}
+  \caption{Improving Robustness through Multi-Level Failure}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics{SRAEPStex}
-  \label{fig:SRAEPStex}
-  \caption{SRA using EPS with TeX text}
+  \includegraphics{ImprovingReliability23}
+  \label{fig:ImpRel23}
+  \caption{Improving Robustness through Lengthening Time to Failure}
 \end{figure}
 
-% \begin{figure}
-%   \centering
- %  \includegraphics{SRAPDFonly}
-  % \label{fig:SRAPDFonly}
-%   \caption{fig:SRA using PDF only}
-% \end{figure}
 
-% \begin{figure}
-%   \centering
-%   \includegraphics{SRAPDFtex}
-%   \label{fig:SRAPDFtex}
-%   \caption{fig:SRA using PDF and TeX for text}
-% \end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{strengthStress}
+  \label{fig:strengthStress}
+  \caption{Improving the Strength of a Component}
+\end{figure}
 
 
 
