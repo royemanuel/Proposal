@@ -8,16 +8,16 @@
 %The YourInformation file was created by Freja Nordsiek, 2014.
 %Code for linking the TOC titles to the text in the pdf file was created by Freja Nordsiek, 2014.
 
-\include{YourInformation-Emanuel} %Must be included to set your name, thesis year, advisor, etc. 
+%\include{YourInformation-Khubchandani} %Must be included to set your name, thesis year, advisor, etc. 
 
 
 % Select the version that fits how you are making this LaTeX document (its driver).
 % The first two are the most likely ones to be needed.
 %
- \newcommand{\mydriver}{pdftex} %Making a PDF directly using pdflatex.
+% \newcommand{\mydriver}{pdftex} %Making a PDF directly using pdflatex.
 %\newcommand{\mydriver}{dvipdfmx} %Making a DVI and converting that to PDF using dvipdfmx.
 % \newcommand{\mydriver}{dvipdfm} %Making a DVI and converting that to PDF using dvipdfm.
-% \newcommand{\mydriver}{dvips} %Making a DVI and converting that to PS using dvips (may later be converted to PDF).
+\newcommand{\mydriver}{dvips} %Making a DVI and converting that to PS using dvips (may later be converted to PDF).
 % \newcommand{\mydriver}{dvipsone} %Making a DVI and converting that to PS using dvipsone (may later be converted to PDF).
 % \newcommand{\mydriver}{ps2pdf} %Same as the one for dvips except it is compatible with Ghostscript's PDF writer.
 
@@ -27,7 +27,7 @@
 \usepackage{titlesec}
    \titleformat{\chapter}
       {\normalfont\large}{Chapter \thechapter:}{1em}{}
-\usepackage{hyperref}
+
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{lscape}
@@ -41,9 +41,8 @@
 \usepackage{supertabular}
 \usepackage{subeqn}
 \usepackage{subfigure}
-\usepackage{epsfig}
-\usepackage{xcolor,import}
-\usepackage{transparent}
+\usepackage[dvips, bookmarks, colorlinks=true, plainpages=false, citecolor=blue, urlcolor=blue, filecolor=blue, linkcolor=blue]{hyperref} 
+	%Works with PcTex.  You may have to choose one of the drivers above if dvips does not work.
 
 \newcommand{\tbsp}{\rule{0pt}{18pt}} %used to get a vertical distance after \hline
 \renewcommand{\baselinestretch}{2}
@@ -110,7 +109,7 @@
 %three lines.  
 \newpage
 \bibliographystyle{unsrt} 
-\bibliography{library}{} %replace "Galactic,Dottie" with the
+\bibliography{library} %replace "Galactic,Dottie" with the
 %                 file name(s) of your bib file(s)
 
 \end{document}
