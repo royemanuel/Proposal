@@ -30,13 +30,25 @@ The following metric based on Ayyub \cite{Ayyub2014a, Ayyub2015} and
 Ouyang \emph{et al.} \cite{Ouyang2012} is proposed:
 $$R = \frac{\int_{t_0}^{t_h}P_T(t)dt}{\int_{t_0}^{t_h}P_D(t)dt}$$
 where
-\[P_T(t)=
-\begin{cases}
-  P_R(t) & \text{if } P_R(t) \le P_D(t)\\
-  P_D(t) & \text{if } P_R(t) > P_D(t)
-\end{cases}\]
+\begin{equation}
+  P_T(t)=
+  \left\{
+  \begin{array}{l}
+    P_R(t)   P_R(t) \le P_D(t) \\
+    P_D(t)   P_R(t) > P_D(t)
+  \end{array}
+  \right\}
+\end{equation}
 
-
+\begin {equation}
+U(0,\tau) = exp \left( - {\tau^2 \over 2\tau_p^2} \right)
+\left\{ 
+\begin{array}{l}
+exp\left( {i\Omega\tau \over 2} \right) + \\
+exp\left( - {i\Omega\tau \over 2} \right)
+\end{array}
+\right\} ,
+\end{equation}
 
 
 \section{Metric Requirements}
