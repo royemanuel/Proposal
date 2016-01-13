@@ -5,15 +5,38 @@
 \chapter{Methodology}
 
 \section{Literature Review}
-Modeling
+I want to build a new metric incorporating the things above and apply
+it to situations.
+\begin{enumerate}
+\item Fleets of systems(availability and resilience)
+  \item Community resilience (life-line resilience and infrastructure
+    resilience)
+  \item Cyber???
+\end{enumerate}
 
-Networks
+\subsection{Basic Metric}
+Ayyub \cite{Ayyub2014a} and Ouyang \emph{et al.} \cite{Ouyang2012}
+present similar metrics for resilience both based on the ratio of the
+integrals of actual performance over time and desired performance over
+time. While the metric in Ouyang \emph{et al.} is elegant in its
+simplicity, the metric from Ayyub (2014a) parses the phases of system
+response into segments before, during, and after a disturbance. The
+investigation will continue by modifying the Ayyub metric \textbf{may
+  want to consider this more of a pointer to a particular equation
+  rather than continuously referencing Ayyub}.
 
-simulation
-A consideration of techniques for aggregating multiple dependent
-entities into a resilience metric.
+\subsection{Proposed metric}
+The following metric based on Ayyub \cite{Ayyub2014a, Ayyub2015} and
+Ouyang \emph{et al.} \cite{Ouyang2012} is proposed:
+$$R = \frac{\int_{t_0}^{t_h}P_T(t)dt}{\int_{t_0}^{t_h}P_D(t)dt}$$
+where
+\[P_T(t)=
+\begin{cases}
+  P_R(t) & \text{if } P_R(t) \le P_D(t)\\
+  P_D(t) & \text{if } P_R(t) > P_D(t)
+\end{cases}\]
 
-Look at FRAM
+
 
 
 \section{Metric Requirements}
